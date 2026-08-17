@@ -2,7 +2,7 @@
 
 > 一套面向 AI 编程助手（Coding Agent）的**工程化技能库**：把团队最佳实践、研发工作流沉淀为可复用的 Skill，让 AI 按团队的标准干活。
 
-**共 9 个技能**：4 个来自企业级 Flutter 团队的真实生产实践，5 个通用工程技能。
+**共 10 个技能**：4 个来自企业级 Flutter 团队的真实生产实践，6 个通用工程技能。
 
 ---
 
@@ -43,6 +43,7 @@ Skill 是一份给 AI Agent 的"标准作业程序"（Markdown + YAML Frontmatte
 |------|-----------|------|
 | [systematic-debugging](skills/engineering/systematic-debugging/SKILL.md) | 调 Bug 靠猜、盲改试错 | 五阶段法（复现→定位→根因→修复→验证），禁止未复现修复、禁止表象修复 |
 | [tech-decision-adr](skills/engineering/tech-decision-adr/SKILL.md) | 技术选型拍脑袋、决策不可追溯 | 加权对比矩阵 + 事前验尸（Pre-mortem）+ 标准 ADR 文档产出 |
+| [project-rules-bootstrap](skills/engineering/project-rules-bootstrap/SKILL.md) | 新项目上手慢、AI 生成代码不符合项目约定 | 冷启动扫描：生成架构文档 + 提炼开发规则/公共组件/工具类 Rules，与 session-review 组成“建库→增量维护”闭环 |
 
 ---
 
@@ -85,7 +86,7 @@ agent-skills/
 └── skills/
     ├── flutter/                  # Flutter 工程化（3 个）
     ├── workflow/                 # 研发工作流（4 个）
-    └── engineering/              # 工程方法论（2 个）
+    └── engineering/              # 工程方法论（3 个）
 ```
 
 ## License
