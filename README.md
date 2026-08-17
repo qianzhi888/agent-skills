@@ -89,3 +89,7 @@ agent-skills/
 ## License
 
 [MIT](LICENSE) © qianzhi
+
+## 在线展示
+
+🔗 **GitHub Pages**: https://qianzhi888.github.io/agent-skills/
