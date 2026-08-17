@@ -2,7 +2,7 @@
 
 > 一套面向 AI 编程助手（Coding Agent）的**工程化技能库**：把团队最佳实践、研发工作流沉淀为可复用的 Skill，让 AI 按团队的标准干活。
 
-**共 7 个技能**：4 个来自企业级 Flutter 团队的真实生产实践，3 个通用工程技能。
+**共 9 个技能**：4 个来自企业级 Flutter 团队的真实生产实践，5 个通用工程技能。
 
 ---
 
@@ -34,6 +34,8 @@ Skill 是一份给 AI Agent 的"标准作业程序"（Markdown + YAML Frontmatte
 |------|-----------|------|
 | [zmn-commit-push](skills/workflow/zmn-commit-push/SKILL.md) | commit message 格式不统一、手动提交流程繁琐 | 从分支名提取需求编号，读 diff 自动总结改动，确认后一键 push，含冲突处理 |
 | [smart-code-review](skills/workflow/smart-code-review/SKILL.md) | 代码审查流于形式、全是风格类噪音 | 四维度加权审查（逻辑/安全/性能/可维护），只输出高信号问题，强制验证后再下结论 |
+| [weekly-report-gen](skills/workflow/weekly-report-gen/SKILL.md) | 周报写成流水账、靠回忆硬憋 | 从 git 记录按需求聚合产出，区分完成/进行中/风险，结果导向、有据可查 |
+| [release-guard](skills/workflow/release-guard/SKILL.md) | 发布无版本追溯、出问题无法快速回滚 | 上线三件套：语义化升版本 → 生产分支附注 tag → 构建归档回滚包，附发布日志与回滚预案 |
 
 ### 🏗️ 工程方法论
 
@@ -82,7 +84,7 @@ agent-skills/
 │   └── SKILL.template.md         # 新技能模板
 └── skills/
     ├── flutter/                  # Flutter 工程化（3 个）
-    ├── workflow/                 # 研发工作流（2 个）
+    ├── workflow/                 # 研发工作流（4 个）
     └── engineering/              # 工程方法论（2 个）
 ```
 
