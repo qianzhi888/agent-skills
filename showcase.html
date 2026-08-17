@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agent Skills Portfolio · AI 技能作品集</title>
+<style>
+  :root {
+    --bg: #0d1117; --card: #161b22; --border: #30363d;
+    --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff;
+    --green: #3fb950; --orange: #d29922; --purple: #bc8cff;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; line-height: 1.6; }
+  .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+  header { padding: 72px 0 48px; text-align: center; border-bottom: 1px solid var(--border); }
+  header h1 { font-size: 2.6rem; letter-spacing: 1px; }
+  header h1 span { color: var(--accent); }
+  header p.sub { color: var(--muted); margin-top: 12px; font-size: 1.05rem; max-width: 680px; margin-left: auto; margin-right: auto; }
+  .badges { margin-top: 20px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+  .badge { padding: 4px 14px; border-radius: 999px; font-size: 0.85rem; border: 1px solid var(--border); color: var(--muted); }
+  .badge.hl { border-color: var(--accent); color: var(--accent); }
+
+  .flow { display: flex; align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap; margin: 40px 0; }
+  .flow .node { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 12px 20px; font-size: 0.95rem; }
+  .flow .arrow { color: var(--accent); font-size: 1.3rem; }
+
+  section { padding: 56px 0 8px; }
+  section h2 { font-size: 1.5rem; margin-bottom: 6px; }
+  section h2 .tag { font-size: 0.85rem; font-weight: normal; color: var(--muted); margin-left: 10px; }
+  section .desc { color: var(--muted); margin-bottom: 24px; font-size: 0.95rem; }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 18px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px; transition: border-color .2s, transform .2s; display: flex; flex-direction: column; }
+  .card:hover { border-color: var(--accent); transform: translateY(-3px); }
+  .card .head { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+  .card h3 { font-size: 1.08rem; word-break: break-all; }
+  .card .ver { color: var(--muted); font-size: 0.75rem; white-space: nowrap; border: 1px solid var(--border); border-radius: 6px; padding: 1px 8px; }
+  .card .problem { color: var(--muted); font-size: 0.88rem; margin: 10px 0; }
+  .card .problem b { color: var(--text); font-weight: 600; }
+  .card .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: auto; padding-top: 12px; }
+  .pill { font-size: 0.75rem; padding: 2px 10px; border-radius: 999px; }
+  .pill.green { background: rgba(63,185,80,.15); color: var(--green); }
+  .pill.blue { background: rgba(88,166,255,.15); color: var(--accent); }
+  .pill.purple { background: rgba(188,140,255,.15); color: var(--purple); }
+  .pill.orange { background: rgba(210,153,34,.15); color: var(--orange); }
+
+  .principles { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; }
+  .principle { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 18px; }
+  .principle b { color: var(--accent); }
+  .principle p { color: var(--muted); font-size: 0.9rem; margin-top: 6px; }
+
+  footer { text-align: center; color: var(--muted); padding: 48px 0; font-size: 0.9rem; }
+  footer a { color: var(--accent); text-decoration: none; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <h1>Agent Skills <span>Portfolio</span></h1>
+    <p class="sub">面向 AI 编程助手的工程化技能库 —— 把团队最佳实践与研发工作流沉淀为可复用的 Skill，让 AI 按团队的标准干活。</p>
+    <div class="badges">
+      <span class="badge hl">7 个生产级技能</span>
+      <span class="badge">AI Agent</span>
+      <span class="badge">工作流自动化</span>
+      <span class="badge">Flutter 工程化</span>
+      <span class="badge">Prompt Engineering</span>
+    </div>
+    <div class="flow">
+      <div class="node">👤 用户："帮我提交代码"</div>
+      <div class="arrow">→</div>
+      <div class="node">🧠 Agent 匹配 Skill</div>
+      <div class="arrow">→</div>
+      <div class="node">⚙️ 按 SOP 流程执行</div>
+      <div class="arrow">→</div>
+      <div class="node">✅ 标准化产出</div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+<section>
+  <h2>📱 Flutter 工程化 <span class="tag">企业级团队真实生产实践</span></h2>
+  <p class="desc">在 Flutter + 原生混编的商业项目中落地，服务于整个客户端团队的日常研发。</p>
+  <div class="grid">
+    <div class="card">
+      <div class="head"><h3>zmn-flutter-api-integration</h3><span class="ver">v1.0</span></div>
+      <p class="problem"><b>接口联调自动化。</b>提供接口地址与字段，自动生成实体类、Api 注册、请求方法、Logic 层共 4 层标准代码；区分有/无返回数据两种模式，附 4 个真实联调案例。</p>
+      <div class="tags"><span class="pill green">代码生成</span><span class="pill blue">Flutter</span><span class="pill purple">模板驱动</span></div>
+    </div>
+    <div class="card">
+      <div class="head"><h3>zmn-flutter-figma-cutout-png</h3><span class="ver">v2.1</span></div>
+      <p class="problem"><b>Figma 切图全自动流水线。</b>Figma API 导出 → PNG 统一格式 → @3x 缩放 → 智能压缩 → 注册资源表，9 步全链路含异常处理与复合节点浏览器渲染方案。</p>
+      <div class="tags"><span class="pill green">工具链编排</span><span class="pill blue">Figma API</span><span class="pill orange">Shell 自动化</span></div>
+    </div>
+    <div class="card">
+      <div class="head"><h3>zmn-flutter-session-review</h3><span class="ver">v2.0</span></div>
+      <p class="problem"><b>会话复盘引擎。</b>从用户修正与代码变更中提炼规则，按 P0-P3 优先级分级写入规则库（always_on / 按需加载），让 Agent 越用越准，同时优化 token 消耗。</p>
+      <div class="tags"><span class="pill purple">经验闭环</span><span class="pill green">规则提炼</span><span class="pill orange">Token 优化</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>🔧 研发工作流 <span class="tag">日常高频操作自动化</span></h2>
+  <div class="grid">
+    <div class="card">
+      <div class="head"><h3>zmn-commit-push</h3><span class="ver">v1.0</span></div>
+      <p class="problem"><b>规范化 Git 提交流水线。</b>从分支名提取需求编号，读取 diff 自动总结改动点，组装团队规范 commit message，用户确认后一键 push；覆盖冲突、无远程分支等异常。</p>
+      <div class="tags"><span class="pill blue">Git 工作流</span><span class="pill green">自动摘要</span><span class="pill orange">确认检查点</span></div>
+    </div>
+    <div class="card">
+      <div class="head"><h3>smart-code-review</h3><span class="ver">v1.0</span></div>
+      <p class="problem"><b>高信号代码审查。</b>四维度加权审查（逻辑 / 安全 / 性能 / 可维护），只报有触发场景、有具体修复方案的问题；疑点必须验证后再下结论，拒绝风格类噪音。</p>
+      <div class="tags"><span class="pill purple">质量门禁</span><span class="pill blue">多维审查</span><span class="pill green">证据驱动</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>🏗️ 工程方法论 <span class="tag">把工程纪律编码为 Agent 行为</span></h2>
+  <div class="grid">
+    <div class="card">
+      <div class="head"><h3>systematic-debugging</h3><span class="ver">v1.0</span></div>
+      <p class="problem"><b>系统化调试五阶段法。</b>复现 → 定位 → 根因 → 修复 → 验证；强制先复现再动手，禁止盲改试错与表象修复，输出结构化调试报告。</p>
+      <div class="tags"><span class="pill green">根因分析</span><span class="pill blue">二分定位</span><span class="pill orange">反盲改约束</span></div>
+    </div>
+    <div class="card">
+      <div class="head"><h3>tech-decision-adr</h3><span class="ver">v1.0</span></div>
+      <p class="problem"><b>技术选型决策框架。</b>澄清约束 → 候选方案 → 加权对比矩阵 → 事前验尸（Pre-mortem）→ 产出标准 ADR 文档，让架构决策可追溯、可复盘。</p>
+      <div class="tags"><span class="pill purple">ADR</span><span class="pill blue">加权决策</span><span class="pill green">风险预检</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>💡 技能设计方法论 <span class="tag">详见 docs/skill-authoring-guide.md</span></h2>
+  <div class="principles">
+    <div class="principle"><b>触发词驱动</b><p>description 声明自然语言触发词，用户说人话即可唤起技能。</p></div>
+    <div class="principle"><b>步骤可执行</b><p>每步给出具体命令与判断条件，Agent 无需临场发挥。</p></div>
+    <div class="principle"><b>异常全覆盖</b><p>每个步骤定义失败分支与处理策略，流程不会中途卡死。</p></div>
+    <div class="principle"><b>确认检查点</b><p>提交、覆盖、删除等危险操作前强制用户确认。</p></div>
+    <div class="principle"><b>✅/❌ 对比示例</b><p>正反面示例压缩歧义空间，遵循度远高于抽象描述。</p></div>
+    <div class="principle"><b>禁止事项兜底</b><p>以安全红线收尾：禁止 force push、禁止跳过 hooks 等。</p></div>
+  </div>
+</section>
+
+</div>
+
+<footer>
+  Agent Skills Portfolio · Built by qianzhi ·
+  <a href="https://github.com/qianzhi888/agent-skills" target="_blank">github.com/qianzhi888/agent-skills</a>
+</footer>
+
+</body>
+</html>
